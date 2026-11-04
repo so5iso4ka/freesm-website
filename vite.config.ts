@@ -4,8 +4,10 @@ import unocss from "unocss/vite";
 import eslint from "vite-plugin-eslint2";
 import path from "node:path";
 
+
 // https://vite.dev/config/
 export default defineConfig({
+  "base"   : process.env.SITE_BASE_PATH ?? "/",
   // Handle '@/...' imports
   "resolve": {
     "alias": {
